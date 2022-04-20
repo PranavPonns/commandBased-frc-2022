@@ -195,7 +195,7 @@ public class Drivetrain extends SubsystemBase {
    */
   public double getRightRate(){
     // number of ticks per 100 ms -> m/s
-    return m_rightLeader.getSelectedSensorVelocity() * (2 * Math.PI * Constants.DriveConstants.kWheelRadius / Constants.DriveConstants.kEncoderResolution);
+    return -m_rightLeader.getSelectedSensorVelocity() * (2 * Math.PI * Constants.DriveConstants.kWheelRadius / Constants.DriveConstants.kEncoderResolution);
   }
 
   /**

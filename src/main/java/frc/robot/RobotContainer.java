@@ -16,6 +16,7 @@ import edu.wpi.first.math.trajectory.Trajectory;
 import edu.wpi.first.math.trajectory.TrajectoryConfig;
 import edu.wpi.first.math.trajectory.TrajectoryGenerator;
 import edu.wpi.first.math.trajectory.constraint.DifferentialDriveVoltageConstraint;
+import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
@@ -90,7 +91,7 @@ public class RobotContainer {
         List.of(
             new Translation2d(1, 1),
             new Translation2d(2, -1)), 
-        new Pose2d(3, 0, new Rotation2d(0)),
+        new Pose2d(0.1, 0, new Rotation2d(Units.degreesToRadians(90))),
         config);
 
         RamseteCommand ramseteCommand = new RamseteCommand(
